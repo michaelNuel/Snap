@@ -4,7 +4,7 @@ type ButtonProps ={
 
 export default function Button(props: ButtonProps ) {
   return (
-    <button className="text-sm border">
+    <button className="text-xs items-center border rounded-lg px-4 py-1 border-gray-400">
       {props.word}
     </button>
   )
