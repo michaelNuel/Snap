@@ -2,11 +2,14 @@ import Image from "next/image";
 import LogoImg from "../../../public/Images/logo.svg"
 import Link from "next/link";
 import Button from "../button/Button";
+import Features from "./Features";
+import Company from "./Company";
 
 
 export default function Navbar() {
+
   return (
-    <nav className='flex justify-between items-center pt-8'>
+    <nav className='flex justify-between items-center pt-1 overflow-hidden '>
       <div className="flex flex-row gap-x-14 items-center">
         <div className="">
           <Image 
@@ -18,14 +21,14 @@ export default function Navbar() {
 
         <ul className="flex flex-row gap-5 items-center" >
             <li className=" text-xs">
-                <Link href={"#"}>Features</Link>
+                <Features name={"Features"}  />
             </li>
 
             <li className=" text-xs">
-                <Link href={"#"}>Company</Link>
+                <Company name={"Company"} />  
             </li>
 
-            <li className=" text-xs">
+            <li className=" text-xs"> 
                 <Link href={"#"}>Careers</Link>
             </li>
 
