@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+// this drop down only affects the featurs 
 type DropdownProps ={
     names:{
         icon: string
@@ -9,10 +9,11 @@ type DropdownProps ={
 
 export default function Dropdown(props:DropdownProps) {
   return (
-    <div className="absolute">
+    <div className="absolute bg-white border border-transparent px-1 py-1 rounded-md drop-shadow-2xl">
       {props.names.map(name => {
         return (
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center px-4 gap-2">
+          <div>
             <Image 
              src={name.icon}
              alt={"#"}
@@ -20,7 +21,11 @@ export default function Dropdown(props:DropdownProps) {
              height={10}
 
             />
-           <h3 className="mt-1">{name.title}</h3>
+         </div>
+
+           <div>
+             <h3 className="mt-1">{name.title}</h3>
+           </div>
         </div>
         )
       } )}
