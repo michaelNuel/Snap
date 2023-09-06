@@ -12,7 +12,7 @@ export default function Dropdown(props:DropdownProps) {
     <div className="absolute bg-white border border-transparent px-1 py-1 rounded-md drop-shadow-2xl">
       {props.names.map(name => {
         return (
-        <div className="flex flex-row items-center px-4 gap-2">
+        <div key={name.title} className="flex flex-row items-center px-4 gap-2">
           <div>
             <Image 
              src={name.icon}
