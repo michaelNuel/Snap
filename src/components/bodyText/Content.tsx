@@ -12,11 +12,20 @@ export default function Content() {
   return (
     <div className='flex justify-evenly items-center mt-2'>
        <div className='flex flex-col gap-7'>
-         <div>
+        <div className='block sm:hidden'>
+          <Image 
+           alt={"#"}
+           src={ContentImg}
+           height={350}
+           width={400}
+           objectFit='contain'
+          />
+        </div>
+         <div >
             <Hugetext firstText='Make' secondText='remote work' />
          </div>
-         <div className='w-80'>
-            <h1 className='text-xs text-gray-600 font-extrabold'>get your team in sync, no matter the location. Streamline processes, create team rituals, and watch productivity soar</h1>
+         <div className=' sm:w-80' >
+            <h1 className='text-xs  text-gray-600 font-extrabold'>get your team in sync, no matter the location. Streamline processes, create team rituals, and watch productivity soar</h1>
          </div>
          <div>
             <Darkbtn btnName='Learn More' />
@@ -45,7 +54,7 @@ export default function Content() {
            />
          </div>
        </div>
-       <div>
+       <div className='hidden sm:block'>
           <Image 
            alt={"#"}
            src={ContentImg}

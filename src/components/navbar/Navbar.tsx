@@ -4,12 +4,15 @@ import Link from "next/link";
 import Button from "../button/Button";
 import Features from "./Features";
 import Company from "./Company";
+import MobileNav from "./MobileNav";
 
 
 export default function Navbar() {
 
   return (
-    <nav className='flex justify-between items-center pt-1 overflow-hidden '>
+    <div>
+      <MobileNav />
+    <nav className='hidden sm:flex justify-between items-center pt-1 overflow-hidden '>
       <div className="flex flex-row gap-x-14 items-center">
         <div className="">
           <Image 
@@ -43,5 +46,6 @@ export default function Navbar() {
         <Button word="Register" />
       </div>
     </nav>
+    </div>
   )
 }
