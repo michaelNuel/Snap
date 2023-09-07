@@ -9,7 +9,7 @@ export default function MobileNav() {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
     <nav className="py-5  sm:hidden">
-        <div className="flex justify-between">
+        <div className="flex  justify-between">
           <div>
              <Image 
              src={LogoImg}
@@ -18,16 +18,15 @@ export default function MobileNav() {
             />
           </div>
           <div>
-            <button onClick={() => setIsExpanded (!isExpanded)} className="">
+            <button onClick={() => setIsExpanded (!isExpanded)} className="transition-all ease-in-out translate-x-2  duration- pr-2">
              {!isExpanded && <List size={20} />}
              {isExpanded && <X size={20} />}
-                {isExpanded && 
-                  <div>
+            </button>
+            {isExpanded && 
+                  <div className="transition-all ease-in-out translate-x-2  duration-700" >
                  <ListNavComp />
               </div>
             }
-            </button>
-
           </div>
  
         </div> 
